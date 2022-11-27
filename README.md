@@ -1,8 +1,7 @@
 ember-cli-fabricjs
 ==============================================================================
 
-[Short description of the addon.]
-
+An EmberJS add-on for adding [Fabric.js](http://fabricjs.com/) to your application.
 
 Compatibility
 ------------------------------------------------------------------------------
