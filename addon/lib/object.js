@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { isNone } from '@ember/utils';
 import { fabric } from 'fabric';
+import { pickBy, identity } from 'lodash';
 
 export default class FabricObject extends Component {
   constructor() {
@@ -30,9 +31,9 @@ export default class FabricObject extends Component {
       stroke: this.args.stroke,
       strokeDashArray: this.args.strokeDashArray,
       strokeDashOffset: this.args.strokeDashOffset,
-      strokeWidth: this.args.strokeWidth || 1,
-      scaleX: this.args.scaleX || 1,
-      scaleY: this.args.scaleY || 1,
+      strokeWidth: this.args.strokeWidth,
+      scaleX: this.args.scaleX,
+      scaleY: this.args.scaleY,
       angle: this.args.angle,
       flipX: this.args.flipX,
       flipY: this.args.flipY,
@@ -40,7 +41,7 @@ export default class FabricObject extends Component {
       skewY: this.args.skewY,
     };
 
-    return options;
+    return pickBy (options, identity);
   }
 
   willDestroy() {
