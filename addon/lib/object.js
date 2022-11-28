@@ -41,7 +41,7 @@ export default class FabricObject extends Component {
       skewY: this.args.skewY,
     };
 
-    return pickBy (options, identity);
+    return pickBy(options, identity);
   }
 
   willDestroy() {
