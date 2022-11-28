@@ -35,7 +35,7 @@ export default class FabricObject extends Component {
       flipX: this.args.flipX,
       flipY: this.args.flipY,
       skewX: this.args.skewX,
-      skewY: this.args.skewY
+      skewY: this.args.skewY,
     };
   }
 
