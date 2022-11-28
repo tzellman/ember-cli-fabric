@@ -18,7 +18,7 @@ export default class FabricObject extends Component {
   }
 
   get options() {
-    return {
+    const options = {
       left: this.args.left,
       top: this.args.top,
       right: this.args.right,
@@ -28,15 +28,19 @@ export default class FabricObject extends Component {
       height: this.args.height,
       opacity: this.args.opacity,
       stroke: this.args.stroke,
-      strokeWidth: this.args.strokeWidth,
-      scaleX: this.args.scaleX,
-      scaleY: this.args.scaleY,
+      strokeDashArray: this.args.strokeDashArray,
+      strokeDashOffset: this.args.strokeDashOffset,
+      strokeWidth: this.args.strokeWidth || 1,
+      scaleX: this.args.scaleX || 1,
+      scaleY: this.args.scaleY || 1,
       angle: this.args.angle,
       flipX: this.args.flipX,
       flipY: this.args.flipY,
       skewX: this.args.skewX,
       skewY: this.args.skewY,
     };
+
+    return options;
   }
 
   willDestroy() {
