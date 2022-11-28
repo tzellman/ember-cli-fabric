@@ -1,8 +1,8 @@
 import Component from '@glimmer/component';
-import { fabric } from "fabric";
+import { fabric } from 'fabric';
 
 export default class FabricStaticCanvasComponent extends Component {
   initialize (element) {
-    this._canvas = new fabric.StaticCanvas (element);
+    this._canvas = new fabric.StaticCanvas(element);
   }
 }

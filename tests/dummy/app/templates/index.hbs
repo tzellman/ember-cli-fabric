@@ -1,6 +1,8 @@
 <h2>Canvas</h2>
 
-<Fabric::Canvas />
+<Fabric::Canvas as |canvas|>
+  <Fabric::Circle @canvas={{canvas}} @radius={{20}} @fill="green" @left={{100}} @top={{100}} />
+</Fabric::Canvas>
 
 <h2>Static Canvas</h2>
 
