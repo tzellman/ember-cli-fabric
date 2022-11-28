@@ -26,6 +26,16 @@ export default class FabricObject extends Component {
       fill: this.args.fill,
       width: this.args.width,
       height: this.args.height,
+      opacity: this.args.opacity,
+      stroke: this.args.stroke,
+      strokeWidth: this.args.strokeWidth,
+      scaleX: this.args.scaleX,
+      scaleY: this.args.scaleY,
+      angle: this.args.angle,
+      flipX: this.args.flipX,
+      flipY: this.args.flipY,
+      skewX: this.args.skewX,
+      skewY: this.args.skewY
     };
   }
 
