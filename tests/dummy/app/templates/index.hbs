@@ -2,8 +2,12 @@
 
 <Fabric::Canvas as |canvas|>
   <Fabric::Circle @canvas={{canvas}} @radius={{20}} @fill="green" @left={{100}} @top={{100}} />
+  <Fabric::Triangle @canvas={{canvas}} @width={{20}} @height={{30}} @fill="blue" @left={{50}} @top={{50}} />
 </Fabric::Canvas>
 
 <h2>Static Canvas</h2>
 
-<Fabric::StaticCanvas />
+<Fabric::StaticCanvas as |canvas|>
+  <Fabric::Circle @canvas={{canvas}} @radius={{20}} @fill="green" @left={{100}} @top={{100}} />
+  <Fabric::Triangle @canvas={{canvas}} @width={{20}} @height={{30}} @fill="blue" @left={{50}} @top={{50}} />
+</Fabric::StaticCanvas>

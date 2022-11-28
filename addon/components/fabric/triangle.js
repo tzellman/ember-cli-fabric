@@ -1,8 +1,8 @@
 import FabricObject from '../../lib/object';
 
-export default class FabricCircleComponent extends FabricObject {
+export default class FabricTriangleComponent extends FabricObject {
   createObject(fabric) {
-    return new fabric.Circle(this.options);
+    return new fabric.Triangle(this.options);
   }
 
   get options() {
