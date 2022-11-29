@@ -24,3 +24,12 @@
   <Fabric::Polygon @canvas={{canvas}} @fill="brown" @points={{array (hash x=200 y=10) (hash x=250 y=50) (hash x=250 y=180) (hash x=150 y=180) (hash x=150 y=50)}} />
   <Fabric::Polyline @canvas={{canvas}} @fill="black" @points={{array (hash x=0 y=10) (hash x=0 y=50) (hash x=0 y=180) (hash x=150 y=180) (hash x=150 y=50)}} />
 </Fabric::StaticCanvas>
+
+<h2>Group</h2>
+
+<Fabric::Canvas as |canvas|>
+  <Fabric::Group @canvas={{canvas}} as |group|>
+    <Fabric::Circle @canvas={{group}} @radius={{20}} @fill="green" @left={{100}} @top={{100}} />
+    <Fabric::Triangle @canvas={{group}} @width={{20}} @height={{30}} @fill="blue" @left={{50}} @top={{50}} />
+  </Fabric::Group>
+</Fabric::Canvas>
