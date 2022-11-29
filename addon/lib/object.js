@@ -43,7 +43,7 @@ export default class FabricObject extends Component {
       originY: this.args.originY,
     };
 
-    return pickBy(options, identity);
+    return FabricObject.compactOptions (options);
   }
 
   willDestroy() {
@@ -59,5 +59,9 @@ export default class FabricObject extends Component {
 
   get object() {
     return this._object;
+  }
+
+  static compactOptions (options) {
+    return pickBy (options, identity);
   }
 }
