@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-fabric",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An EmberJS add-on for adding Fabric.js to your application.",
   "keywords": [
     "ember-addon",
