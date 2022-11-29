@@ -39,6 +39,8 @@ export default class FabricObject extends Component {
       flipY: this.args.flipY,
       skewX: this.args.skewX,
       skewY: this.args.skewY,
+      originX: this.args.originX,
+      originY: this.args.originY,
     };
 
     return pickBy(options, identity);

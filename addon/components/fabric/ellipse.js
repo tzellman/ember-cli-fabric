@@ -2,13 +2,13 @@ import FabricObject from '../../lib/object';
 
 export default class FabricEllipseComponent extends FabricObject {
   createObject(fabric) {
-    return new fabric.Ellipse (this.options);
+    return new fabric.Ellipse(this.options);
   }
 
-  get options () {
+  get options() {
     return Object.assign(super.options, {
       rx: this.args.rx,
-      ry: this.args.ry
+      ry: this.args.ry,
     });
   }
 }
