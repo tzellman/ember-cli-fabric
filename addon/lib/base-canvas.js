@@ -23,13 +23,27 @@ export default class BaseCanvas extends Component {
   initialize(element) {
     // Direct the subclass to create the canvas object.
 
-    this._canvas = this.createCanvas(element);
+    this._canvas = this.createCanvas(element, this.options);
+
+    if (isPresent (this.args.height)) {
+      this._canvas.setHeight (this.args.height);
+    }
+
+    if (isPresent (this.args.width)) {
+      this._canvas.setWidth (this.args.width);
+    }
 
     // Add each of the objects we have created to the canvas. This is necessary
     // because the objects are registered with this canvas component before the
     // component is notified before the HTML element has been inserted.
 
     this.objects.forEach((object) => this._canvas.add(object.object));
+  }
+
+  get options () {
+    return {
+      backgroundColor: this.args.backgroundColor
+    }
   }
 
   /**
