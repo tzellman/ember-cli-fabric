@@ -1,5 +1,6 @@
 import FabricObject from '../../lib/object';
 import { action } from '@ember/object';
+import { isPresent } from '@ember/utils';
 
 export default class FabricImageComponent extends FabricObject {
   createObject(fabric) {
@@ -13,7 +14,13 @@ export default class FabricImageComponent extends FabricObject {
       // element since it will now show correctly.
 
       this.object.setElement(element);
-      this.object.canvas.renderAll();
+
+      if (isPresent (this.object.group)) {
+        this.object.group.addWithUpdate();
+        this.object.group.setCoords ();
+      }
+
+      this.object.canvas.renderAll ();
     };
   }
 }

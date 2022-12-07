@@ -38,5 +38,7 @@
 <h2>Images</h2>
 
 <Fabric::Canvas as |canvas|>
-  <Fabric::Image @canvas={{canvas}} src="https://picsum.photos/200" @left={{0}} @top={{0}} @height={{200}} @width={{200}} />
+  <Fabric::Group @canvas={{canvas}} as |group|>
+    <Fabric::Image @canvas={{group}} src="https://picsum.photos/200" @left={{0}} @top={{0}} @height={{200}} @width={{200}} />
+  </Fabric::Group>
 </Fabric::Canvas>
