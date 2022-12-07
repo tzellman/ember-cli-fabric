@@ -21,18 +21,18 @@ export default class BaseCanvas extends Component {
    * @param element
    */
   initialize(element) {
-    console.log ('initializing the canvas element');
+    console.log('initializing the canvas element');
 
     // Direct the subclass to create the canvas object.
 
     this._canvas = this.createCanvas(element, this.options);
 
-    if (isPresent (this.args.height)) {
-      this._canvas.setHeight (this.args.height);
+    if (isPresent(this.args.height)) {
+      this._canvas.setHeight(this.args.height);
     }
 
-    if (isPresent (this.args.width)) {
-      this._canvas.setWidth (this.args.width);
+    if (isPresent(this.args.width)) {
+      this._canvas.setWidth(this.args.width);
     }
 
     // Add each of the objects we have created to the canvas. This is necessary
@@ -40,15 +40,15 @@ export default class BaseCanvas extends Component {
     // component is notified before the HTML element has been inserted.
 
     this.objects.forEach((object) => {
-      console.log (`[canvas]: adding ${object.label}`, object.object);
+      console.log(`[canvas]: adding ${object.label}`, object.object);
       this._canvas.add(object.object);
     });
   }
 
-  get options () {
+  get options() {
     return {
-      backgroundColor: this.args.backgroundColor
-    }
+      backgroundColor: this.args.backgroundColor,
+    };
   }
 
   /**
@@ -66,7 +66,7 @@ export default class BaseCanvas extends Component {
     this.objects.push(object);
 
     if (isPresent(this._canvas)) {
-      console.log (`[canvas]: adding ${object.label}`, object.object);
+      console.log(`[canvas]: adding ${object.label}`, object.object);
 
       this._canvas.add(object.object);
     }

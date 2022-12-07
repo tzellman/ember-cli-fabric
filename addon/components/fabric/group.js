@@ -6,8 +6,8 @@ export default class FabricGroupComponent extends FabricObject {
   }
 
   add(object) {
-    this.object.add (object.object);
-    this.object.addWithUpdate ();
-    this.object.setCoords ();
+    this.object.add(object.object);
+    this.object.addWithUpdate();
+    this.object.setCoords();
   }
 }

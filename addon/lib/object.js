@@ -43,7 +43,7 @@ export default class FabricObject extends Component {
       originY: this.args.originY,
     };
 
-    return FabricObject.compactOptions (options);
+    return FabricObject.compactOptions(options);
   }
 
   willDestroy() {
@@ -61,19 +61,23 @@ export default class FabricObject extends Component {
     return this._object;
   }
 
-  static compactOptions (options) {
-    return pickBy (options,  v => v !== undefined);
+  static compactOptions(options) {
+    return pickBy(options, (v) => v !== undefined);
   }
 
-  get label () {
+  get label() {
     return this.args.label || this.constructor.name;
   }
 
-  get width () {
+  get width() {
     return this.object.width;
   }
 
-  get height () {
+  get height() {
     return this.object.height;
+  }
+
+  get insertAfterCreating() {
+    return true;
   }
 }

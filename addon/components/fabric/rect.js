@@ -5,10 +5,13 @@ export default class FabricRectComponent extends FabricObject {
     return new fabric.Rect(this.options);
   }
 
-  get options () {
-    return Object.assign (super.options, FabricObject.compactOptions ({
-      rx: this.args.rx,
-      ry: this.args.ry
-    }));
+  get options() {
+    return Object.assign(
+      super.options,
+      FabricObject.compactOptions({
+        rx: this.args.rx,
+        ry: this.args.ry,
+      })
+    );
   }
 }
