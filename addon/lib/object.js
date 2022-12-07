@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { isNone } from '@ember/utils';
 import { fabric } from 'fabric';
-import { pickBy, identity } from 'lodash';
+import { pickBy } from 'lodash';
 
 export default class FabricObject extends Component {
   constructor() {
@@ -62,6 +62,18 @@ export default class FabricObject extends Component {
   }
 
   static compactOptions (options) {
-    return pickBy (options, identity);
+    return pickBy (options,  v => v !== undefined);
+  }
+
+  get label () {
+    return this.args.label || this.constructor.name;
+  }
+
+  get width () {
+    return this.object.width;
+  }
+
+  get height () {
+    return this.object.height;
   }
 }

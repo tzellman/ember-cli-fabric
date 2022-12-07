@@ -21,6 +21,8 @@ export default class BaseCanvas extends Component {
    * @param element
    */
   initialize(element) {
+    console.log ('initializing the canvas element');
+
     // Direct the subclass to create the canvas object.
 
     this._canvas = this.createCanvas(element, this.options);
@@ -37,7 +39,10 @@ export default class BaseCanvas extends Component {
     // because the objects are registered with this canvas component before the
     // component is notified before the HTML element has been inserted.
 
-    this.objects.forEach((object) => this._canvas.add(object.object));
+    this.objects.forEach((object) => {
+      console.log (`[canvas]: adding ${object.label}`, object.object);
+      this._canvas.add(object.object);
+    });
   }
 
   get options () {
@@ -61,6 +66,8 @@ export default class BaseCanvas extends Component {
     this.objects.push(object);
 
     if (isPresent(this._canvas)) {
+      console.log (`[canvas]: adding ${object.label}`, object.object);
+
       this._canvas.add(object.object);
     }
   }
