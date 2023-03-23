@@ -16,8 +16,6 @@
 /.git/
 /.github/
 /.gitignore
-/.prettierignore
-/.prettierrc.js
 /.template-lintrc.js
 /.travis.yml
 /.watchmanconfig

@@ -15,12 +15,12 @@ export default class FabricImageComponent extends FabricObject {
 
       this.object.setElement(element);
 
-      if (isPresent(this.object.group)) {
+      if (isPresent (this.object.group)) {
         this.object.group.addWithUpdate();
-        this.object.group.setCoords();
+        this.object.group.setCoords ();
       }
 
-      this.object.canvas.renderAll();
+      this.object.canvas.renderAll ();
     };
   }
 }
